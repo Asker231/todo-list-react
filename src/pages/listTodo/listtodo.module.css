@@ -1,0 +1,60 @@
+.list{
+ width: 80%;
+ display: flex;
+ flex-direction: column;
+ margin: 0 auto;
+ overflow: scroll;
+ padding: 30px;
+}
+.list::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+.list>.todo{
+   border-left: 2px solid rgb(81, 134, 249);
+   padding:8px 8px;
+   font-size: 18px;
+   font-weight: bold;
+   transition: .4s;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+}
+.list>.todo:hover{
+    box-shadow: 3px 6px 21px 0px rgb(165, 165, 165);
+}
+#delete{
+    cursor: pointer;
+    transition: .4s;
+}
+#delete:hover{
+    color: red;
+    font-size: 30px;
+}
+#inform{
+    cursor: pointer;
+    transition: .4s;
+
+}
+#inform:hover{
+    color: rgb(101, 240, 70);
+}
+
+.texts{
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+.texts>#check{
+    font-size: 20px;
+    cursor: pointer;
+}
+#ckeck:hover{
+    border-radius:5px solid rgba(0, 0, 0, 0.061);
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

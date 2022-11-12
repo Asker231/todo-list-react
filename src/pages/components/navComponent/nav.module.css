@@ -1,0 +1,53 @@
+.nav{
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-right: 0.3px solid black;
+}
+.nav>.header{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(81, 134, 249);
+
+}
+#tf{
+    color: #fff;
+}
+.header>#account{
+    font-size: 40px;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2px;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: .4s;
+}
+.header>#account:hover{
+    padding: 5px;
+    color: rgb(81, 134, 249);
+     background-color: #fff;
+}
+.nav>.search{
+    display: flex;
+    align-items:flex-end;
+    gap: 2px;
+    
+
+}
+.nav>.search>input{
+    width: 100%;
+}
+.addFolder{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgb(81, 134, 249);
+}

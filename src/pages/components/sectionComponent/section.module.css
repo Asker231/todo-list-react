@@ -1,0 +1,15 @@
+.section{
+   display:flex;
+   flex-direction: column;
+   gap: 40px;
+   padding: 10px;
+
+}
+.section>.search{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+}
+
+
