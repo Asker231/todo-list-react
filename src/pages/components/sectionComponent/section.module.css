@@ -3,6 +3,7 @@
    flex-direction: column;
    gap: 40px;
    padding: 10px;
+ 
 
 }
 .section>.search{
@@ -10,6 +11,19 @@
     align-items: flex-end;
     justify-content: center;
     gap: 5px;
+    width: 100%;
+}
+#burger{
+    display: none;
+    border-radius: 10px;
+    background-color: rgb(32, 123, 197);
+    color: #fff;
+    font-size: 30px;
+}
+@media (max-width:426px) {
+    #burger{
+        display: flex;
+    }
 }
 
 

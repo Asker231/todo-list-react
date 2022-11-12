@@ -1,12 +1,35 @@
 .nav{
 
-
+   position: relative;
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
     border-right: 0.3px solid black;
+
+
 }
+
+.nav>#key{
+    display: none;
+  position: relative;
+  left: 231px;
+  border-radius: 20px;
+  background-color: rgb(104, 102, 102);
+  color: #fff;
+  font-size: 30px;
+}
+
+@media (max-width:426px) {
+    .nav{
+        padding: 7px 7px; 
+    }
+    #key{
+        display: flex;
+    }
+   
+}
+
 .nav>.header{
     display: flex;
     align-items: center;

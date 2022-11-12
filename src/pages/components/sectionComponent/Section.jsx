@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../../../redux/todoSlice";
 import { v4 } from "uuid";
 import ListTodo from "../../listTodo/ListTodo.jsx";
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 
 const Section = () => {
   const [text, setText] = useState("");
@@ -26,6 +27,7 @@ const Section = () => {
   };
   return (
     <section className={style.section}>
+     <MenuOutlinedIcon id={style.burger}/>
       <div className={style.search}>
         <TextField
           onChange={handleMessage}

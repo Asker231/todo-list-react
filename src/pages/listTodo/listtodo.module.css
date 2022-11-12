@@ -6,6 +6,12 @@
  overflow: scroll;
  padding: 30px;
 }
+
+@media (max-width:426px) {
+    .list{
+        width: 90%;
+    }
+}
 .list::-webkit-scrollbar {
     width: 0px;
   }
