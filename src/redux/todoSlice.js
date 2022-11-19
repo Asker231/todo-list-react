@@ -8,9 +8,9 @@ const todoSlice = createSlice({
    },
    reducers:{
     addItem(state,action){
-         state.arr.push(action.payload)
+         state.arr.unshift(action.payload)
     },removeItem(state,action){
-         state.arr.filter(el => el.id !== action.payload.id);
+        state.arr =  state.arr.filter(el => el.id !== action.payload);
     }
    }
 });

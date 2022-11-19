@@ -13,13 +13,9 @@ import { v4 } from 'uuid';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
 const Nav = () => {
   const[isadd,setAdd] = useState(false);
-  const [text,setText] = useState();
+  const [text,setText] = useState(null);
 
   const disp = useDispatch();
-  const handleNav=(e)=>{
-    setText(e.target.value);
-    setText(null);
-  }
 
   const dataNav = {
     id:v4(),
@@ -30,17 +26,19 @@ const Nav = () => {
        <KeyboardArrowLeftOutlinedIcon id={style.key}/>
         <div className={style.header}>
        
-        <h2 style={{color:'#fff'}}>
-            My<mark>Day</mark>
+        <h2  style={{color:'#fff',letterSpacing:'2px'}}>
+           <mark style={{backgroundColor:'#000',color:'#FFF',borderRadius:'10px',padding:'4px',borderTopLeftRadius:"0px",borderTopRightRadius:"0px"}}>My</mark><mark style={{borderTopRightRadius:"0px",padding:'4px',borderRadius:'10px',backgroundColor:'#fff',borderTopLeftRadius:"0px"}}>Day</mark>
         </h2>
      <AccountCircleOutlinedIcon id={style.account}/>
         </div>
 
  
         <div className={style.addFolder}>
-          {isadd?<TextField onChange={()=>handleNav} value={text} id={style.tf} label="Введите название..." variant="standard"  />:<span style={{color:'white',fontSize:'15px'}}>Добавить категорию</span>}
+          {isadd?<TextField onChange={(e)=>{
+            setText(e.target.value)
+            }} value={text} id={style.tf} label="Введите название..." variant="standard"  />:<span style={{color:'white',fontSize:'15px'}}>Добавить категорию</span>}
           <Fab onClick={()=>setAdd(!isadd)} color="primary" aria-label="add">
-           {isadd?<CheckIcon onClick={()=>disp(addNav({text}))} />:<AddIcon/>}
+           {isadd?<div onClick={ ()=>{disp(addNav(dataNav))}}><CheckIcon/></div>:<AddIcon onClick={()=>setText("")}/>}
           </Fab>
         </div>
 
