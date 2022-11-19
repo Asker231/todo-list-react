@@ -1,0 +1,18 @@
+.cardUser{
+ background-color: rgb(81, 134, 249);
+ width: 100%;
+ border-radius: 20px;
+ padding: 20px;
+ margin: 0 auto;
+}
+.cardUser>.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.top>span{
+    background-color: #1976d2;
+    padding: 5px 18px;
+    color: #fff;
+    border-radius: 10px;
+}

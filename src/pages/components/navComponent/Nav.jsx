@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 import { addNav } from '../../../redux/navSlice';
 import { v4 } from 'uuid';
 import KeyboardArrowLeftOutlinedIcon from '@mui/icons-material/KeyboardArrowLeftOutlined';
+import UserCard from './user/UserCard';
 const Nav = () => {
   const[isadd,setAdd] = useState(false);
   const [text,setText] = useState(null);
@@ -29,7 +30,7 @@ const Nav = () => {
         <h2  style={{color:'#fff',letterSpacing:'2px'}}>
            <mark style={{backgroundColor:'#000',color:'#FFF',borderRadius:'10px',padding:'4px',borderTopLeftRadius:"0px",borderTopRightRadius:"0px"}}>My</mark><mark style={{borderTopRightRadius:"0px",padding:'4px',borderRadius:'10px',backgroundColor:'#fff',borderTopLeftRadius:"0px"}}>Day</mark>
         </h2>
-     <AccountCircleOutlinedIcon id={style.account}/>
+          <AccountCircleOutlinedIcon  id={style.account}/>
         </div>
 
  
@@ -43,6 +44,7 @@ const Nav = () => {
         </div>
 
         <NavItems/>
+        <UserCard/>
     </div>
   )
 }

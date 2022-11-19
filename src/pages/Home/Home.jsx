@@ -8,6 +8,7 @@ const Home = () => {
     <div  className={style.home}>
        <Nav/>
        <Section/>
+      
     </div>
   )
 }

@@ -53,6 +53,8 @@
     display: flex;
     align-items: flex-start;
     gap: 5px;
+    font-family: 'Alexandria';
+    font-weight: 100;
 }
 .texts>#check{
     font-size: 20px;
