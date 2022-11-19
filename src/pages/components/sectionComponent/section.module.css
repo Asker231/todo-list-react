@@ -9,8 +9,8 @@
 .section>.search{
     display: flex;
     align-items: flex-end;
-    justify-content: center;
-    gap: 5px;
+    justify-content:center;
+    gap: 15px;
     width: 100%;
 }
 #burger{

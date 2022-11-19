@@ -7,7 +7,8 @@ import { addItem } from "../../../redux/todoSlice";
 import { v4 } from "uuid";
 import ListTodo from "../../listTodo/ListTodo.jsx";
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
-import MicOutlinedIcon from '@mui/icons-material/MicOutlined';
+import Speech from "./MicroComponent/Speech";
+
 
 const Section = () => {
   const [text, setText] = useState("");
@@ -43,7 +44,7 @@ const Section = () => {
           <Button variant="outlined" disabled>
             Добавить
           </Button>
-         <MicOutlinedIcon style={{cursor:'pointer',fontSize:'35px'}}/>
+         
          </>
         ) : (
           <>
@@ -56,12 +57,13 @@ const Section = () => {
           >
             Добавить
           </Button>
-         <MicOutlinedIcon style={{cursor:'pointer',fontSize:'35px'}}/>
+
          </>
 
         )}
-      </div>
-      <ListTodo />
+        <Speech/>
+          </div>
+          <ListTodo/> 
     </section>
   );
 };

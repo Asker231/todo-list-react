@@ -27,6 +27,7 @@ const Form = ({title,text}) => {
           <TextField 
            onChange={(e)=>setEmail(e.target.value)}
            value={email}
+           type="email"
            id="standard-basic"
            label="Email"
            variant="standard" 
@@ -35,6 +36,7 @@ const Form = ({title,text}) => {
              onChange={(e)=>setPassword(e.target.value)}
              value={password}
              id="standard-basic"
+             type="password"
              label="Password"
              variant="standard" />
           <Button onClick={()=>HandleAuth()} variant="contained">{text}</Button>
