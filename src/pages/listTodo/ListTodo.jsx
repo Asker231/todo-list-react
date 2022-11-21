@@ -18,7 +18,10 @@ const ListTodo = () => {
               return <div className={style.todo}>               
                 <div className={style.texts}>
                     <CheckOutlinedIcon id={style.check}/>
-                    <span  >{el.text}</span> 
+                    <span>{el.text}</span>
+                    <span>{el.transcript}</span>
+                    
+
                 </div>
                 <div className={style.icons}>
                     <InfoOutlinedIcon onClick={()=>setInfo(!info)} id={style.inform}/>

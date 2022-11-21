@@ -8,12 +8,28 @@ import { v4 } from "uuid";
 import ListTodo from "../../listTodo/ListTodo.jsx";
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import Speech from "./MicroComponent/Speech";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+
 
 
 const Section = () => {
   const [text, setText] = useState("");
 
   const disp = useDispatch();
+
+  const {
+    transcript,
+    browserSupportsSpeechRecognition, 
+  }=useSpeechRecognition();
+
+  if (!browserSupportsSpeechRecognition) {
+    return <span>Browser doesn't support speech recognition.</span>;
+  }
+  
+  const start =()=>{
+    return SpeechRecognition.startListening;
+  }
+
   const handleMessage = (e) => {
     setText(e.target.value);
   };
@@ -23,10 +39,18 @@ const Section = () => {
       setText("");
     }
   };
+
   const dataTodo = {
     text,
     id: v4(),
+    transcript
+  
   };
+
+  setTimeout(()=>{
+    disp(addItem(dataTodo));
+  },2000)
+
   return (
     <section className={style.section}>
      <MenuOutlinedIcon id={style.burger}/>
@@ -61,9 +85,9 @@ const Section = () => {
          </>
 
         )}
-        <Speech/>
+        <Speech funcStart={start}/>
           </div>
-          <ListTodo/> 
+          <ListTodo /> 
     </section>
   );
 };
